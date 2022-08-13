@@ -8,6 +8,12 @@ import java.util.List;
 @Mapper
 public interface BookDao {
 
+    /**
+     * 查询所有图书
+     * @return
+     */
     List<Book> getAllBook();
+
+    
 
 }
