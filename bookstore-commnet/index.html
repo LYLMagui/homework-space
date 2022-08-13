@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./css/index.css" rel="stylesheet">
+  <link href="./css/head.css" rel="stylesheet">
+
   <title>图书商城</title>
 </head>
+
 <body>
   <div class="top">
     <div class="nav">
@@ -16,7 +20,7 @@
         <li><a href="#">好书</a></li>
       </ul>
       <ul class="nav-left">
-        <li ><a href="#">头像</a></li>
+        <li><a href="#">头像</a></li>
         <li><a href="#">登录/注册</a></li>
       </ul>
     </div>
@@ -39,9 +43,36 @@
 
   </div>
 
+  <main class="content-warp">
 
-<script src="./js/vue/vue.min.js"></script>
-<script src="./js/vue/vue-router.js"></script>
-<script src="./js/vue/axios.js"></script>
+    <div class="book-warp">
+      <div class="book">
+        <ul class="book-list">
+          <li>
+            <div class="book-img">
+              <a href="">
+                <img src="./image/book1.jpg" alt="#">
+              </a>
+
+            </div>
+            <div class="book-info">
+              <div class="title">
+                <a class="book-lnk" href="#" title="生与死：少时诵诗书所所所所所所所所">生与死：少时诵诗书所所所所所所所所</a>
+              </div>
+              <div class="author"><span>[中]</span>冰心</div>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+  </main>
+
+
+  <script src="./js/vue/vue.min.js"></script>
+  <script src="./js/vue/vue-router.js"></script>
+  <script src="./js/vue/axios.js"></script>
 </body>
+
 </html>
