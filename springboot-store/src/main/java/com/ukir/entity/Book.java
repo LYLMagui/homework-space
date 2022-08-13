@@ -1,6 +1,6 @@
 package com.ukir.entity;
 
-import io.swagger.annotations.ApiModel;
+
 import lombok.Data;
 
 import java.util.Date;
@@ -14,7 +14,7 @@ import java.util.Date;
  * 图书实体类
  */
 @Data
-@ApiModel(value = "图书对象",description = "图书")
+
 public class Book {
     //book_id 图书id
     private Integer bookId;

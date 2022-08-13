@@ -55,21 +55,7 @@
 		</dependency>
 
 		<!--knife4j-Swagger的增强工具-->
-		<dependency>
-			<groupId>com.github.xiaoymin</groupId>
-			<artifactId>knife4j-spring-boot-starter</artifactId>
-			<version>3.0.2</version>
-			<exclusions>
-				<exclusion>
-					<artifactId>commons-lang3</artifactId>
-					<groupId>org.apache.commons</groupId>
-				</exclusion>
-				<exclusion>
-					<artifactId>guava</artifactId>
-					<groupId>com.google.guava</groupId>
-				</exclusion>
-			</exclusions>
-		</dependency>
+
 	</dependencies>
 
 	<build>

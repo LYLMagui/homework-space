@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ukir.dao.BookDao">
+    <resultMap id="bookResultMap" type="com.ukir.entity.Book">
+        <result column="book_id" property="bookId"/>
+        <result column="book_title" property="bookTitle"/>
+        <result column="book_info" property="bookInfo"/>
+        <result column="book_image" property="bookImage"/>
+        <result column="author_id" property="authorId"/>
+        <result column="publication_date" property="publicationDate"/>
+    </resultMap>
+    <select id="getAllBook" resultMap="bookResultMap">
+        select *
+        from book
+    </select>
+</mapper>
