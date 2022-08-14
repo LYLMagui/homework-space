@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--suppress SqlNoDataSourceInspection -->
+<mapper namespace="com.ukir.dao.UserDao">
+    <resultMap id="userResultMap" type="com.ukir.entity.User">
+        <result column="user_id" property="userId"/>
+        <result column="user_name" property="userName"/>
+        <result column="user_account" property="userAccount"/>
+        <result column="user_password" property="userPassword"/>
+        <result column="user_image" property="userImage"/>
+    </resultMap>
+    <!--获取用户-->
+    <select id="getUser" resultMap="userResultMap">
+        select *
+        from user
+        where user_account = #{userAccount}
+
+    </select>
+    <!--用户登录-->
+    <select id="userLogin" resultMap="userResultMap">
+        select *
+        from user
+        where user_account = #{userAccount}
+          and user_password = #{userPassword}
+    </select>
+    <!--注册用户-->
+    <insert id="userRegist">
+        insert into user(user_name, user_account, user_password, user_image)
+        values (#{userName}, #{userAccount}, #{userPassword}, #{userImage})
+    </insert>
+
+
+</mapper>

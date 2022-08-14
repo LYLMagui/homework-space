@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--suppress SqlNoDataSourceInspection -->
 <mapper namespace="com.ukir.dao.BookDao">
     <resultMap id="bookResultMap" type="com.ukir.entity.Book">
         <result column="book_id" property="bookId"/>
@@ -9,8 +10,16 @@
         <result column="author_id" property="authorId"/>
         <result column="publication_date" property="publicationDate"/>
     </resultMap>
+    <!--查询全部-->
     <select id="getAllBook" resultMap="bookResultMap">
         select *
         from book
     </select>
+
+    <!--添加图书-->
+    <insert id="saveBook">
+        insert into book(book_title, book_info, book_image, author_id, publication_date, price)
+        values (#{bookId}, #{bookTitle}, #{bookInfo}, #{bookImage}, #{authorId}, #{publicationDate}, #{price})
+    </insert>
+
 </mapper>

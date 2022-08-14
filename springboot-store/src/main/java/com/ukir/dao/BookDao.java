@@ -10,10 +10,15 @@ public interface BookDao {
 
     /**
      * 查询所有图书
+     *
      * @return
      */
     List<Book> getAllBook();
 
-    
+    /**
+     * 添加图书
+     */
+    Book saveBook(Book book);
+
 
 }

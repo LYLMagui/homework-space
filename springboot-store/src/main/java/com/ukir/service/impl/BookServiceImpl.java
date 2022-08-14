@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * @author ukir
@@ -23,5 +24,18 @@ public class BookServiceImpl implements BookService {
     @Override
     public List<Book> getAllBook() {
         return bookDao.getAllBook();
+    }
+
+    /**
+     * 添加图书
+     */
+    @Override
+    public boolean saveBook(Book book) {
+        if (Optional.ofNullable(book).isPresent()) {
+            Book book1 = bookDao.saveBook(book);
+            return Optional.ofNullable(book1).isPresent();
+        } else {
+            return false;
+        }
     }
 }
